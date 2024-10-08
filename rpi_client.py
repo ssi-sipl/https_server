@@ -6,7 +6,7 @@ import time
 ser = serial.Serial('/dev/ttyS0', 115200, timeout=1)
 
 # HTTP server details
-server_url = 'http://192.168.130.142:8080'
+server_url = 'http://192.168.1.4:8080'
 
 while True:
     # Read data from UART
