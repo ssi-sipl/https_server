@@ -26,9 +26,10 @@ def contains_numeric(data):
     return bool(re.search(r'\d', data))  # Regular expression to find any digit
 
 def execute_rpi_client():
-    """ Execute the rpi_client.py script. """
+    """ Execute the rpi_client.py script located in the specified folder. """
     try:
-        subprocess.Popen(['python3', 'rpi_client.py'])  # Adjust the command as needed
+        script_path = '/home/panther/Desktop/server_testing/https_server/rpi_client.py'
+        subprocess.Popen(['python3', script_path])
         print("rpi_client.py executed.")
     except Exception as e:
         print(f"Error executing rpi_client.py: {e}")
